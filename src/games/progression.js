@@ -1,5 +1,5 @@
 import gameEngine from '../index.js';
-import { getRandomNumber } from '../utils.js';
+import getRandomNumber from '../utils.js';
 
 const generateProgression = (start, step, length) => {
   const progression = [];

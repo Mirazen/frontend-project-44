@@ -4,7 +4,7 @@ const roundsCount = 3;
 
 const isEven = (num) => num % 2 === 0;
 
-export const playEvenGame = () => {
+const playEvenGame = () => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
@@ -13,7 +13,7 @@ export const playEvenGame = () => {
   for (let i = 0; i < roundsCount; i += 1) {
     const number = Math.floor(Math.random() * 100) + 1;
     const correctAnswer = isEven(number) ? 'yes' : 'no';
-    
+
     console.log(`Question: ${number}`);
     const userAnswer = readlineSync.question('Your answer: ');
 
@@ -27,3 +27,5 @@ export const playEvenGame = () => {
 
   console.log(`Congratulations, ${userName}!`);
 };
+
+export default playEvenGame;
